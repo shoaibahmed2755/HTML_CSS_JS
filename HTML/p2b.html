@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program-2b</title>
+  </head>
+  <body>
+    <h2>Palindrome Checker</h2>
+    <input type="text" id="inputString" placeholder="Enter a string" />
+    <button onclick="isPal()">Check Palindrome</button>
+    <p id="result"></p>
+
+    <script>
+      function isPal() {
+        const str = document.getElementById("inputString").value; // Get the input string value
+        const norStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase(); // Remove non-alphanumeric chars and convert to lowercase
+        const revStr = norStr.split("").reverse().join(""); // Reverse the string
+
+        if (norStr === revStr) {
+          document.getElementById(
+            "result"
+          ).textContent = `${str} is a palindrome!`; // Corrected text interpolation
+        } else {
+          document.getElementById(
+            "result"
+          ).textContent = `${str} is not a palindrome.`; // Handle the case when it's not a palindrome
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program-2a</title>
+</head>
+<body>
+    <script>
+        // Your JavaScript code here
+        const userInput = prompt("Enter the sentence: ");
+        document.writeln(userInput + "<br>");
+        const len = userInput.length;
+        alert(len);
+        const start = userInput.indexOf("JavaScript");
+        const extractWord = userInput.slice(start,len);
+        document.writeln("<br>" + extractWord);
+        const replaceString = userInput.replace("JavaScript", "Java");
+        document.writeln("<br>" + replaceString);
+    </script>
+</body>
+</html>
