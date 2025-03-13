@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program-3</title>
+  </head>
+  <body>
+    <script>
+      var student = {
+        name: "Rahul",
+        grade: 80,
+        subject: ["java", "python", "C++", "JS"],
+      };
+      student.passed = student.grade >= 50;
+
+      function displayInfo() {
+        for (let key in student) {
+          console.log(`${key}: ${student[key]}`);
+        }
+      }
+
+      // Calling the function to display the student info
+      displayInfo();
+    </script>
+  </body>
+</html>
